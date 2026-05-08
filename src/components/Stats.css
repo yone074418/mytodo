@@ -1,0 +1,20 @@
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  color: #8a7a6a;
+}
+
+.stats span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stats-num {
+  font-size: 18px;
+  color: #5a4a3a;
+  font-weight: 700;
+}

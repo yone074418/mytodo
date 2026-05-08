@@ -1,0 +1,126 @@
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 6px 10px 0;
+  border-bottom: 1px dashed #e4d8cc;
+  position: relative;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+/* bullet */
+.todo-item .bullet {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  border: 2px solid #c4b4a4;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-item .bullet:hover {
+  border-color: #8a7a6a;
+  transform: scale(1.1);
+}
+
+.todo-item.done .bullet {
+  border-color: #a0c4a0;
+  background: #d8edd8;
+}
+
+.todo-item.done .bullet::after {
+  content: '✓';
+  font-size: 12px;
+  color: #5a8a5a;
+  font-weight: 700;
+}
+
+/* content */
+.todo-item .content {
+  flex: 1;
+  font-size: 15px;
+  color: #4a3a2a;
+  line-height: 1.7;
+  word-break: break-word;
+  padding-top: 1px;
+  min-height: 24px;
+  cursor: text;
+}
+
+.todo-item.done .content {
+  color: #b4a898;
+  text-decoration: line-through;
+  text-decoration-color: #c4b4a4;
+}
+
+/* inline edit */
+.todo-item .edit-input {
+  flex: 1;
+  font-size: 15px;
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  border: none;
+  border-bottom: 1px solid #c4b4a4;
+  background: transparent;
+  outline: none;
+  color: #4a3a2a;
+  padding: 0;
+  min-height: 24px;
+}
+
+/* tag */
+.todo-item .tag {
+  flex-shrink: 0;
+  font-size: 10px;
+  padding: 1px 8px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+.tag-default  { background: #ede6dc; color: #8a7a6a; }
+.tag-work     { background: #e2d5ed; color: #6a4a8a; }
+.tag-life     { background: #d5eddf; color: #3a7a5a; }
+.tag-study    { background: #d5e4ed; color: #3a6a8a; }
+.tag-urgent   { background: #f0d8d8; color: #8a3a3a; }
+
+/* actions */
+.todo-item .actions {
+  flex-shrink: 0;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.todo-item:hover .actions {
+  opacity: 1;
+}
+
+.todo-item .actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: #b4a898;
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.todo-item .actions button:hover {
+  color: #6a5a4a;
+  background: #ede6dc;
+}
+
+.todo-item .actions .del-btn:hover {
+  color: #c04040;
+}
