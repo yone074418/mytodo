@@ -3,6 +3,7 @@
   gap: 10px;
   margin-bottom: 24px;
   position: relative;
+  align-items: stretch;
 }
 
 .input-area::before {
@@ -10,60 +11,65 @@
   position: absolute;
   left: -20px;
   top: 10px;
-  color: #d4c5a9;
-  font-size: 14px;
+  color: var(--ink-faint);
+  font-size: 13px;
 }
 
 .input-area input {
   flex: 1;
   padding: 10px 14px;
   border: none;
-  border-bottom: 2px dashed #d4c5a9;
+  border-bottom: 2px dashed var(--border-strong);
   background: transparent;
   font-size: 15px;
   font-family: 'ZCOOL XiaoWei', sans-serif;
-  color: #4a3a2a;
+  color: var(--ink);
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.25s;
 }
 
 .input-area input::placeholder {
-  color: #c4b4a4;
+  color: var(--ink-faint);
   letter-spacing: 1px;
 }
 
 .input-area input:focus {
-  border-color: #b8a48c;
+  border-color: var(--ink-soft);
   border-bottom-style: solid;
 }
 
 .input-area select {
-  padding: 8px 6px;
-  border: 1px solid #d4c5a9;
-  border-radius: 4px;
-  background: #faf8f4;
+  padding: 8px 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  background: var(--paper-light);
   font-family: 'ZCOOL XiaoWei', sans-serif;
   font-size: 12px;
-  color: #6a5a4a;
+  color: var(--ink-soft);
   outline: none;
   cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.input-area select:hover {
+  border-color: var(--ink-light);
 }
 
 .input-area .add-btn {
   padding: 8px 18px;
-  border: 1px solid #c4b4a4;
-  border-radius: 4px;
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
   background: #ede6dc;
-  color: #5a4a3a;
+  color: var(--ink-soft);
   font-family: 'ZCOOL XiaoWei', sans-serif;
   font-size: 14px;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.2s;
 }
 
 .input-area .add-btn:hover {
   background: #dccfc0;
-  border-color: #b8a48c;
+  border-color: var(--ink-light);
 }
 
 .input-area .add-btn:disabled {
@@ -74,20 +80,21 @@
 /* AI 拆解按钮 */
 .input-area .ai-btn {
   padding: 8px 14px;
-  border: 1px solid #b8a4c4;
-  border-radius: 4px;
-  background: #ede6f0;
+  border: 1px solid #c8b8d0;
+  border-radius: 3px;
+  background: #f0eaf2;
   color: #6a4a7a;
   font-family: 'ZCOOL XiaoWei', sans-serif;
   font-size: 13px;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.2s;
   white-space: nowrap;
+  letter-spacing: 1px;
 }
 
 .input-area .ai-btn:hover:not(:disabled) {
-  background: #ddd0e8;
-  border-color: #a080b8;
+  background: #e2d5e8;
+  border-color: #a88ab8;
 }
 
 .input-area .ai-btn:disabled {
@@ -101,5 +108,5 @@
 
 @keyframes aiPulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  50% { opacity: 0.4; }
 }

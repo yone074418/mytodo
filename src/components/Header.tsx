@@ -11,9 +11,13 @@ const w = WEEKDAYS[now.getDay()]
 export default function Header() {
   return (
     <div className="header">
+      <div className="header-seal">代</div>
       <h1>代 办 手 账</h1>
-      <div className="header-date">{y} 年 {m} 月 {d} 日</div>
-      <span className="header-day-label">星期{w}</span>
+      <div className="header-sub">
+        <span className="header-date">{y} 年 {m} 月 {d} 日</span>
+        <span className="header-dot">·</span>
+        <span className="header-day-label">星期{w}</span>
+      </div>
     </div>
   )
 }

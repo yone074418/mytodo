@@ -29,6 +29,7 @@ export default function App() {
 
   return (
     <div className="notebook">
+      <div className="notebook-binding" />
       <Header />
       <Stats total={stats.total} done={stats.done} pending={stats.pending} />
       <InputArea onAdd={addTodo} onAiBreakdown={handleAiBreakdown} />
